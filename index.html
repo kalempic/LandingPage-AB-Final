@@ -20,7 +20,7 @@
 
             <ul class="first-nav">
                 <li class="first-nav__item">
-                    <a  href="#">How it Works</a><i class="fa-solid fa-chevron-down fa-2xs"></i>
+                    <a class="click" href="#">How it Works</a><i class="fa-solid fa-chevron-down fa-2xs"></i>
                     <ul class="dropdown">
                         <li>Create account</li>
                         <li>Learn about it</li>
@@ -155,27 +155,27 @@
 </section>
     
 <section class="fifth-page">
-    <div class="container">
+    <div class="container no-padding-mobile">
         <h2>Why customers love working with us</h2>
         <div class="quote">
-        <blockquote>“It's amazing what has helped me learn about my team.
+        <blockquote id="blockquote">“It's amazing what has helped me learn about my team.
             I don't worry about blindspots anymore, and 1-on-1s have never
             been more productive. The team loves it.”</blockquote></div>
         <div class="comment-pics">
-            <div class="quote-img"><img src="images/jorge.png" alt="customer pic">
+            <div class="quote-img" id="jorge"><img src="images/jorge.png" alt="customer pic">
                 <div class="quote-about">
                     <p class="bold">Jorge Robertson</p>
                     <p>CS at Google</p>
                 </div>
             </div>
             <div class="show-mobile">
-                <div class="quote-img"><img src="images/franciso.png" alt="customer pic">
+                <div class="quote-img" id="bell"><img src="images/franciso.png" alt="customer pic">
                     <div class="quote-about">
                         <p class="bold">Francisco Bell</p> 
                         <p>Designer at Microsoft</p>
                     </div>
                 </div>
-                <div class="quote-img"><img src="images/beth.png" alt="customer pic">
+                <div class="quote-img" id="fox"><img src="images/beth.png" alt="customer pic">
                     <div class="quote-about">
                         <p class="bold">Beth Fox</p> 
                         <p>Developer at Airbnb</p>
@@ -202,7 +202,7 @@
             <div class="footer-up">
                 <ul class="footer-menu">
                     <div class="footer-menu_title">
-                        <p>Company</p>
+                        <p class="acordian">Company</p>
                         <i class="fa-solid fa-chevron-down fa-sm"></i>
                     </div>
                     <li><a href=#>About Us</a></li>
@@ -212,7 +212,7 @@
                 </ul>
                 <ul class="support">
                     <div class="footer-menu_title">
-                        <p>Support</p><i class="fa-solid fa-chevron-down fa-sm"></i>
+                        <p class="acordian">Support</p><i class="fa-solid fa-chevron-down fa-sm"></i>
                     </div>
                     <li><a href=#>Help Center</a></li>
                     <li><a href=#>Safety Center</a></li>
@@ -220,7 +220,7 @@
                 </ul>
                 <ul class="legal">
                     <div class="footer-menu_title">
-                        <p>Legal</p><i class="fa-solid fa-chevron-down fa-sm"></i>
+                        <p class="acordian">Legal</p><i class="fa-solid fa-chevron-down fa-sm"></i>
                     </div>
                     <li><a href=#>Cookies Policy</a></li>
                     <li><a href=#>Privacy Policy</a></li>
@@ -261,18 +261,33 @@
     </footer>
     <script src="https://kit.fontawesome.com/7a6001159e.js" crossorigin="anonymous"></script>
 
-    <!-- <script> const mobileBtn = document.getElementById('mobile-cta')
-        nav = document.querySelector('na')
-        mobileBtnExit = document.getElementById('mobile-exit');
+    <script> 
+    // const mobileBtn = document.getElementById('mobile-cta')
+        // nav = document.querySelector('na')
+        // mobileBtnExit = document.getElementById('mobile-exit');
 
-        mobileBtn.addEventListener('click', () => {
-            nav.classList.add('menu-btn');
-        })
+        // mobileBtn.addEventListener('click', () => {
+        //     nav.classList.add('menu-btn');
+        // })
 
-        mobileBtnExit.addEventListener('click', () => {
-            nav.classList.remove('menu-btn');
-        })
-    </script> -->
+        // mobileBtnExit.addEventListener('click', () => {
+        //     nav.classList.remove('menu-btn');
+        // })
+
+        let blockquote = document.getElementById('blockquote');
+
+        document.getElementById('jorge').addEventListener('click', () => {
+            blockquote.innerHTML = 'It is amaying what has helped me learn about my team.';
+        });
+
+        document.getElementById('bell').addEventListener('click', () => {
+            blockquote.innerHTML = 'Thank you for your hudge knowledge base.';
+        });
+
+        document.getElementById('fox').addEventListener('click', () => {
+            blockquote.innerHTML = 'I learnd a lot from your presentations.';
+        });
+    </script>
     </body>
     
     </html>

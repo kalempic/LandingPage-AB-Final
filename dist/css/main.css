@@ -26,7 +26,6 @@ p {
   font-size: 16px;
   line-height: 24px;
   color: #4e5a65;
-  margin: 0;
 }
 
 .container {
@@ -40,6 +39,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-align: center;
 }
 .navbar .hamburger-container {
   display: none;
@@ -47,7 +47,6 @@ p {
 .navbar .logo {
   font-weight: bold;
   color: #1D2830;
-  margin: auto;
 }
 .navbar .logo span {
   color: var(--violet-color);
@@ -61,6 +60,28 @@ p {
   list-style: none;
   justify-content: space-between;
   gap: 40px;
+}
+.navbar .first-nav {
+  position: relative;
+}
+.navbar .first-nav .first-nav__item:hover .dropdown {
+  display: block;
+}
+.navbar .first-nav .first-nav__item:hover .click {
+  background-color: gray;
+}
+.navbar .first-nav .dropdown {
+  display: none;
+  position: absolute;
+  min-width: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+.navbar .first-nav .dropdown li {
+  /* color: black; */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 .navbar .second-nav {
   gap: 20px;
@@ -404,6 +425,9 @@ footer .footer-bottom .social-icons .fa-solid {
     max-width: 768px;
     padding: 10px;
   }
+  .no-padding-mobile {
+    padding: 0;
+  }
   .navbar .first-nav,
   .navbar .second-nav {
     display: none;
@@ -418,6 +442,9 @@ footer .footer-bottom .social-icons .fa-solid {
     display: flex;
     flex-direction: column;
     font-size: 8px;
+  }
+  .first-page {
+    margin: 30px 0;
   }
   .first-page .discount {
     display: none;
@@ -458,7 +485,12 @@ footer .footer-bottom .social-icons .fa-solid {
   .first-page .social-pics .slack-logo {
     display: none;
   }
+  .second-page {
+    background-color: #f0eef8;
+    padding: 10px 0px;
+  }
   .second-page .features {
+    gap: 30px;
     flex-direction: column;
   }
   .second-page .features .second-pic {
@@ -486,6 +518,9 @@ footer .footer-bottom .social-icons .fa-solid {
     background: #F6F3FC;
     border-radius: 0px 8px 8px 0px;
     border-bottom: 8px solid var(--violet-color);
+  }
+  .third-page {
+    padding: 30px 0;
   }
   .third-page .about h2 {
     font-size: 18px;
@@ -527,9 +562,16 @@ footer .footer-bottom .social-icons .fa-solid {
   .third-page .mobile-hide {
     display: none;
   }
+  .forth-page {
+    padding: 10px 0 20px 0;
+    border-top: 1px solid #ECE5FF;
+    border-bottom: 1px solid #ECE5FF;
+    background: #f0eef8;
+  }
   .forth-page .container {
     flex-direction: column;
     justify-content: center;
+    gap: 30px;
   }
   .forth-page .container .right-col {
     width: 100%;
@@ -556,9 +598,11 @@ footer .footer-bottom .social-icons .fa-solid {
   .fifth-page h2 {
     font-size: 18px;
     line-height: 18px;
+    padding-top: 40px;
   }
   .fifth-page blockquote {
-    width: 100%;
+    width: 82%;
+    font-size: 16px;
   }
   .fifth-page .comment-pics .quote-img {
     flex-direction: column;
