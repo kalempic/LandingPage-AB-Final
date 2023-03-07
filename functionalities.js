@@ -35,23 +35,37 @@ else{
 /*accordion-mobile*/
 let acc = document.getElementsByClassName("footer-menu_title");
 
-for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener('click', function() {
-        const list = document.getElementsByClassName(`list`)[i];
-        list.style.display = list.style.display === 'block'
-                            ? 'none' : 'block';
-    })
+
+if (window.screenX <= 768) {
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener('click', function() {
+            const list = document.getElementsByClassName(`list`)[i];
+            list.style.display = list.style.display === 'block'
+                                ? 'none' : 'block';
+        })
+    }
 }
-
 /*Toggle menu- mobile */
-const mobileBtn = document.getElementById('mobile-cta')
-nav = document.querySelector('nav')
-mobileBtnExit = document.getElementById('mobile-exit');
+document.getElementsByClassName('hamburger-container')[0].addEventListener(
+    'click', () => {
+        let firstNav = document.getElementsByClassName('first-nav hide-toggle')[0];
+        let secondNav = document.getElementsByClassName('second-nav hide-toggle')[0];
+        // let logo = document.getElementsByClassName('logo')[0];
+        
 
-mobileBtn.addEventListener('click', () => {
-    nav.classList.add('menu-btn');
-})
+        // firstNav.style.display = firstNav.style.display === 'none' ? 'flex' : 'none';
+        // document.getElementsByClassName('toggle-direction')[0].style.display = firstNav.style.display === 'flex' ? 'flex' : 'none';
+        document.getElementsByClassName('toggle-direction')[0].style.display = 'flex';
+        // logo.style.display = firstNav.style.display === 'flex' ? 'none' : 'flex';
+        
+        // secondNav.style.display = secondNav.style.display === 'none' ? 'flex' : 'none';
+        
+    }
+)
 
-mobileBtnExit.addEventListener('click', () => {
-    nav.classList.remove('menu-btn');
+
+let icon= document.getElementsByClassName('fa-x');
+ let nav = document.getElementsByClassName('toggle-direction');
+icon[0].addEventListener('click', () => {
+nav[0].style.display='none';
 })

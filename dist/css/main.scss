@@ -43,8 +43,17 @@ p {
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
-  // padding: 30px;
-  // margin-bottom: 50px;
+  
+
+  .toggle-direction{
+    display:flex ;
+    flex-direction: row;
+    span{
+      .fa-x{
+        display: none;
+      }
+    }
+  }  
 .mobile-menu {
         cursor: pointer;
     }
@@ -71,7 +80,7 @@ p {
     justify-content: space-between;
     gap: 40px;
   }
-
+   
   .first-nav {
     position: relative;
 
@@ -85,6 +94,8 @@ p {
           background-color: gray;
         }
       }
+     
+      
     }
 
     .dropdown {
@@ -542,11 +553,48 @@ footer {
 
   .navbar {
     flex-direction: row-reverse;
-    .first-nav,
-    .second-nav {
+    .hide-toggle{
       display: none;
-     
     }
+    .first-nav,.second-nav{
+     display: flex;
+     flex-direction: column;
+    }
+  .get-started-free  a{
+      padding:0;
+      background-color: #cdd9e4;
+      color: #35414b;
+      font-weight: normal;
+    }
+
+.toggle-direction{
+  display:none ;
+ position:absolute ;
+  flex-direction: column;
+  align-items:end;
+  background-color: #cdd9e4;
+  padding: 10px 10px 20px 20px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  span{
+    .fa-x{
+      display: block;
+      padding: 0px 0 15px 0;
+     }}
+
+  #links{
+    display: none;
+  }
+ .first-nav,.second-nav{
+
+  padding:0 0 10px 20px ;
+  margin: 0;
+  align-items: end;
+  gap: 10px;
+  .fa-solid{
+    display: none;
+  }
+ }
+}  
 
     .mobile-menu-exit {
       display: none;
@@ -562,45 +610,6 @@ footer {
       font-size: 8px;
     }
   }
-//   nav.menu-btn {
-//     display: flex;
-//   }
-//   nav {
-//     position: fixed;
-//     z-index: 999;
-//     width: 66%;
-//     right: 0;
-//     top: 0;
-//     background: #20272E;
-//     height: 100vh;
-//     padding: 1em;
-
-//     ul.primary-nav {
-//         margin-top: 5em;
-//     }
-
-//     li {
-        
-//         a {
-//             color: white;
-//             text-decoration: none;
-//             display: block;
-//             padding: .5em;
-//             font-size: 1.3em;
-//             text-align: right;
-
-//             &:hover {
-//                 font-weight: bold;
-//             }
-//         }
-//     }
-// }
-
-// .mobile-menu-exit {
-//     float: right;
-//     margin: .5em;
-//     cursor: pointer;
-// }
   .first-page {
     margin: 30px 0;
 
@@ -850,7 +859,6 @@ footer {
       .footer-menu,
       .support,
       .legal {
-
         .list {
           display: none;
         }
@@ -872,11 +880,6 @@ footer {
       p {
         padding: 0;
       }
-
-      li {
-        // display: none;
-      }
-
       .app-icons {
         width: 50%;
       }

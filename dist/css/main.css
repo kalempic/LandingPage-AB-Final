@@ -41,6 +41,13 @@ p {
   justify-content: space-between;
   text-align: center;
 }
+.navbar .toggle-direction {
+  display: flex;
+  flex-direction: row;
+}
+.navbar .toggle-direction span .fa-x {
+  display: none;
+}
 .navbar .mobile-menu {
   cursor: pointer;
 }
@@ -437,8 +444,42 @@ footer .footer-bottom .social-icons .fa-solid {
   .navbar {
     flex-direction: row-reverse;
   }
-  .navbar .first-nav,
-  .navbar .second-nav {
+  .navbar .hide-toggle {
+    display: none;
+  }
+  .navbar .first-nav, .navbar .second-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar .get-started-free a {
+    padding: 0;
+    background-color: #cdd9e4;
+    color: #35414b;
+    font-weight: normal;
+  }
+  .navbar .toggle-direction {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: end;
+    background-color: #cdd9e4;
+    padding: 10px 10px 20px 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .navbar .toggle-direction span .fa-x {
+    display: block;
+    padding: 0px 0 15px 0;
+  }
+  .navbar .toggle-direction #links {
+    display: none;
+  }
+  .navbar .toggle-direction .first-nav, .navbar .toggle-direction .second-nav {
+    padding: 0 0 10px 20px;
+    margin: 0;
+    align-items: end;
+    gap: 10px;
+  }
+  .navbar .toggle-direction .first-nav .fa-solid, .navbar .toggle-direction .second-nav .fa-solid {
     display: none;
   }
   .navbar .mobile-menu-exit {
