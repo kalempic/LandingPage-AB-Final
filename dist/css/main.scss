@@ -91,7 +91,7 @@ p {
         }
 
         .click {
-          background-color: gray;
+          background-color: rgb(212, 212, 212);
         }
       }
      
@@ -103,7 +103,7 @@ p {
       position: absolute;
       min-width: 50px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      // z-index: 1;
+      background-color: #cdd9e4;
       text-align: left;
 
       li {
@@ -595,7 +595,6 @@ footer {
   }
  }
 }  
-
     .mobile-menu-exit {
       display: none;
     }

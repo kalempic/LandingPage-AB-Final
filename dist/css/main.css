@@ -78,13 +78,14 @@ p {
   display: block;
 }
 .navbar .first-nav .first-nav__item:hover .click {
-  background-color: gray;
+  background-color: rgb(212, 212, 212);
 }
 .navbar .first-nav .dropdown {
   display: none;
   position: absolute;
   min-width: 50px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #cdd9e4;
   text-align: left;
 }
 .navbar .first-nav .dropdown li {
