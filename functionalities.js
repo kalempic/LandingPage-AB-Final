@@ -1,6 +1,6 @@
 
 
-/*Changing customer quotation-desktop*/
+//Changing customer quotation-desktop
 
 let blockquote = document.getElementById('blockquote');
 document.getElementById('jorge').addEventListener('click', () => {
@@ -17,7 +17,7 @@ document.getElementById('fox').addEventListener('click', () => {
 });
 
 
-/*Loading more content-mobile*/
+//Loading more content-mobile
 let clickMe=document.getElementById("click-me");
 function myFunction(){
 let style=clickMe.style.display;
@@ -30,7 +30,7 @@ else{
     }    			
 }
 
-/*Accordion-mobile*/
+//Accordion-mobile
 
 let acc = document.getElementsByClassName("footer-menu_title");
 if (window.screenX <= 768) {
@@ -43,7 +43,7 @@ if (window.screenX <= 768) {
     }
 }
 
-/*Toggle menu- mobile */
+//Toggle menu- mobile 
 document.getElementsByClassName('hamburger-container')[0].addEventListener(
     'click', () => {
         let firstNav = document.getElementsByClassName('first-nav hide-toggle')[0];
