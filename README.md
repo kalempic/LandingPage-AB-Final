@@ -1,2 +1,2 @@
 # LandingPage-AB-Final
-HTML,CSS and JS practise task. 
+HTML,CSS and JS responsive web page - intern practise task.
